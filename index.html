@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muskan Gaur - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
+        }
+
+        .video-container iframe,
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- NAVBAR -->
+    <nav id="site-nav"
+        class="fixed top-0 inset-x-0 z-50 bg-[#0b1020]/70 backdrop-blur-md border-b border-white/10 transition-all">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex items-center justify-between py-4 md:py-5 transition-all">
+
+                <!-- Brand -->
+                <a href="#home" class="text-xl md:text-2xl font-semibold text-white tracking-tight">
+                    Muskan Gaur
+                </a>
+
+                <!-- Desktop links -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#home" class="text-white hover:text-purple-400 transition duration-300">Home</a>
+                    <a href="#about" class="text-white hover:text-purple-400 transition duration-300">About</a>
+                    <a href="#portfolio" class="text-white hover:text-purple-400 transition duration-300">Portfolio</a>
+                    <a href="#strategies"
+                        class="text-white hover:text-purple-400 transition duration-300">Strategies</a>
+                    <a href="#certificates"
+                        class="text-white hover:text-purple-400 transition duration-300">Certificates</a>
+                    <a href="#skills" class="text-white hover:text-purple-400 transition duration-300">Skills</a>
+                    <a href="#Contact" class="text-white hover:text-purple-400 transition duration-300">Contact</a>
+                </div>
+
+
+                <!-- Mobile button -->
+                <button id="mobile-menu-btn"
+                    class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-white/80 hover:text-white hover:bg-white/10 ring-1 ring-white/10">
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden border-t border-white/10 bg-[#0b1020]/90 backdrop-blur">
+            <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col">
+                <a href="#home" class="mobile-link">Home</a>
+                <a href="#about" class="mobile-link">About</a>
+                <a href="#portfolio" class="mobile-link">Portfolio</a>
+                <a href="#strategies" class="mobile-link">Strategies</a>
+                <a href="#certificates" class="mobile-link">Certificates</a>
+                <a href="#skills" class="mobile-link">Skills</a>
+                <a href="#contact" class="mobile-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- HERO / HEADER -->
+    <section id="home" class="relative min-h-[88vh] flex items-center bg-[#0b1020] text-white overflow-hidden">
+        <!-- Decorative background -->
+        <div class="pointer-events-none absolute inset-0">
+            <div class="absolute -top-24 -right-24 h-96 w-96 rounded-full blur-3xl opacity-40"
+                style="background: radial-gradient(60% 60% at 50% 50%, #6d28d9 0%, rgba(109,40,217,0) 70%);"></div>
+            <div class="absolute -bottom-32 -left-20 h-[28rem] w-[28rem] rounded-full blur-3xl opacity-30"
+                style="background: radial-gradient(60% 60% at 50% 50%, #22d3ee 0%, rgba(34,211,238,0) 70%);"></div>
+        </div>
+
+        <div
+            class="container mx-auto max-w-7xl px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center relative z-10 py-16">
+            <!-- LEFT: Text -->
+            <div class="text-center lg:text-left">
+                <!-- Badge -->
+                <div
+                    class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-sm mb-6 ring-1 ring-white/15">
+                    <span class="inline-block h-2 w-2 rounded-full bg-emerald-400"></span>
+                    Open to freelance & contracts
+                </div>
+
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.1]">
+                    Muskan Gaur
+                </h1>
+
+                <p class="mt-4 text-lg md:text-2xl text-white/90 max-w-2xl">
+                    Performance Marketing & Product Marketing Specialist
+                </p>
+
+                <p class="mt-4 text-base md:text-lg text-white/70 max-w-xl">
+                    I help brands grow with data-driven campaigns, crisp positioning, and conversion-ready experiences.
+                </p>
+
+                <!-- CTAs -->
+                <div class="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+                    <button onclick="scrollToSection('portfolio')"
+                        class="px-6 md:px-8 py-3 rounded-full bg-white text-indigo-700 font-semibold shadow-md hover:shadow-lg hover:bg-indigo-50 transition">
+                        View My Work
+                    </button>
+                    
+                    <!-- Add Resume URL here-->
+                    <a id="Resume" href="#"
+                        class="px-6 md:px-8 py-3 rounded-full bg-white/10 text-white font-semibold ring-1 ring-white/20 hover:bg-white/15 transition">
+                        Resume
+                    </a>
+                </div>
+
+                <!-- Socials -->
+                <div class="mt-6 flex items-center gap-4 justify-center lg:justify-start">
+                    <a href="https://www.linkedin.com/in/muskan-gaur-a7096b1b1/" aria-label="LinkedIn"
+                        class="p-2 rounded-lg bg-white/10 ring-1 ring-white/15 hover:bg-white/15 transition">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" class="opacity-90">
+                            <path
+                                d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8h4v16h-4V8zm7.5 0h3.8v2.2h.06C12.88 8.94 14.18 7.74 16.11 7.74c4.02 0 4.76 2.65 4.76 6.1V24h-4v-7.2c0-1.72-.03-3.94-2.4-3.94-2.4 0-2.77 1.87-2.77 3.81V24h-4V8z" />
+                        </svg>
+                    </a>
+                    <a href="mailto:yourname@example.com" aria-label="Email"
+                        class="p-2 rounded-lg bg-white/10 ring-1 ring-white/15 hover:bg-white/15 transition">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" class="opacity-90">
+                            <path
+                                d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8.24l8 6.76 8-6.76V18H4z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- RIGHT: Profile Card -->
+            <div class="flex justify-center lg:justify-end">
+                <div class="relative">
+                    <!-- Glow blob behind card -->
+                    <div class="absolute -inset-6 rounded-3xl opacity-60 blur-2xl"
+                        style="background: radial-gradient(80% 80% at 30% 30%, rgba(99,102,241,.6) 0%, rgba(56,189,248,.25) 40%, rgba(0,0,0,0) 70%);">
+                    </div>
+
+                    <!-- Card -->
+                    <div
+                        class="relative w-[280px] md:w-[320px] rounded-3xl bg-white/5 backdrop-blur-md ring-1 ring-white/10 p-5 md:p-6">
+                        <div
+                            class="w-40 h-40 md:w-48 md:h-48 mx-auto rounded-full overflow-hidden ring-4 ring-white/80 shadow-2xl">
+                            <img src="./img_profile.jpg" alt="Muskan Gaur - Profile Photo"
+                                class="w-full h-full object-cover object-center"
+                                onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwIDIwIiBmaWxsPSIjOEI1Q0Y2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTEwIDlhMyAzIDAgMTAwLTYgMyAzIDAgMDAwIDZ6bS03IDlhNyA3IDAgMTExNCAwSDN6IiBjbGlwLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4='; this.alt='Muskan Gaur';" />
+                        </div>
+                        <div class="mt-4 text-center">
+                            <h3 class="text-xl font-semibold">Muskan Gaur</h3>
+                            <p class="text-white/70 text-sm">Performance & Product Marketing</p>
+                        </div>
+
+                        <div class="mt-4 grid grid-cols-3 gap-3 text-center text-xs text-white/80">
+                            <div class="rounded-lg bg-white/10 py-2 ring-1 ring-white/10">Marketing</div>
+                            <div class="rounded-lg bg-white/10 py-2 ring-1 ring-white/10">Projects</div>
+                            <div class="rounded-lg bg-white/10 py-2 ring-1 ring-white/10">CRM</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- ABOUT (white) -->
+  <section id="about" class="py-20 bg-white text-neutral-800">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold tracking-tight">About Me</h2>
+      <div class="h-[2px] w-24 bg-gradient-to-r from-indigo-500 to-cyan-500 mx-auto mt-4 mb-10"></div>
+
+      <p class="text-lg text-neutral-600 leading-relaxed max-w-3xl mx-auto">
+        I'm a performance marketing professional passionate about turning ideas into measurable results.
+        From running my own yoga classes to helping B2B brands grow, I bring creativity, data-driven strategies,
+        and multi-industry experience to every project.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-6 mt-12">
+        <div class="rounded-xl bg-white border border-neutral-200 shadow-sm p-6">
+          <div class="text-3xl mb-3">🧘</div>
+          <h3 class="text-lg font-semibold mb-1">Yoga Studio Owner</h3>
+          <p class="text-neutral-600">Turned my passion into a thriving business</p>
+        </div>
+        <div class="rounded-xl bg-white border border-neutral-200 shadow-sm p-6">
+          <div class="text-3xl mb-3">📊</div>
+          <h3 class="text-lg font-semibold mb-1">Data-Driven Results</h3>
+          <p class="text-neutral-600">Focus on measurable growth & optimization</p>
+        </div>
+        <div class="rounded-xl bg-white border border-neutral-200 shadow-sm p-6">
+          <div class="text-3xl mb-3">🎯</div>
+          <h3 class="text-lg font-semibold mb-1">Multi-Industry Experience</h3>
+          <p class="text-neutral-600">Wellness, hospitality, and B2B services</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO (soft slate) -->
+  <section id="portfolio" class="py-20 bg-slate-50 text-neutral-800">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold tracking-tight">Case Studies</h2>
+        <div class="h-[2px] w-24 bg-gradient-to-r from-indigo-500 to-cyan-500 mx-auto mt-4"></div>
+        <p class="text-neutral-600 mt-6">Real results from real campaigns</p>
+      </div>
+
+      <!-- Featured Video -->
+      <article class="mb-12 rounded-2xl bg-white border border-neutral-200 shadow-sm overflow-hidden">
+        <div class="md:flex">
+          <div class="md:w-1/2">
+            <div class="aspect-video bg-gradient-to-br from-indigo-200 to-cyan-200">
+              <video controls class="w-full h-full">
+                <source src="./vid_profile.mp4" type="video/mp4" />
+                <source src="./vid_profile.ogg" type="video/ogg" />
+                Your browser doesn't support video playback.
+              </video>
+            </div>
+          </div>
+          <div class="md:w-1/2 p-8">
+            <h3 class="text-2xl font-bold mb-3">🧘 My Yoga Studio Campaign</h3>
+            <ul class="space-y-3 text-neutral-700">
+              <li><span class="font-semibold text-neutral-900">My Business:</span> Yoga studio — passion turned business</li>
+              <li><span class="font-semibold text-neutral-900">Strategy:</span> A/B creatives, free trial, 5km hyper-local targeting</li>
+              <li><span class="font-semibold text-neutral-900">Results:</span> 22,330 views, 14,135 reach, 190+ interactions</li>
+            </ul>
+            <div class="mt-6 grid grid-cols-2 gap-4">
+              <div class="text-center p-4 rounded-xl bg-indigo-50 border border-indigo-100">
+                <div class="text-2xl font-bold text-indigo-600">+150%</div>
+                <div class="text-sm text-neutral-600">Trial Sign-ups</div>
+              </div>
+              <div class="text-center p-4 rounded-xl bg-cyan-50 border border-cyan-100">
+                <div class="text-2xl font-bold text-cyan-600">₹2.5</div>
+                <div class="text-sm text-neutral-600">Cost per Lead</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Other cards -->
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="rounded-2xl bg-white border border-neutral-200 shadow-sm overflow-hidden">
+          <div class="h-48 relative">
+            <img src="./img/img_camp1.png" class="absolute inset-0 w-full h-full object-cover" alt="Café Campaign" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Café Campaign</h3>
+            <p class="text-neutral-700 mb-2"><strong class="text-neutral-900">Challenge:</strong> Low weekday footfall</p>
+            <p class="text-neutral-700 mb-2"><strong class="text-neutral-900">Solution:</strong> Lunch combos + geo-targeted ads</p>
+            <p class="text-neutral-700 mb-4"><strong class="text-neutral-900">Impact:</strong> Turned slow hours into profit</p>
+            <div class="flex justify-between text-sm font-semibold">
+              <span class="text-indigo-600">+28% Footfall</span>
+              <span class="text-cyan-600">+40% Online Orders</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="rounded-2xl bg-white border border-neutral-200 shadow-sm overflow-hidden">
+          <div class="h-48 relative">
+            <img src="./img/img_camp2.png" class="absolute inset-0 w-full h-full object-cover" alt="Email Campaign" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Mailchimp Email Campaign</h3>
+            <p class="text-neutral-700 mb-2"><strong class="text-neutral-900">Objective:</strong> Nurture leads & retention</p>
+            <p class="text-neutral-700 mb-2"><strong class="text-neutral-900">Strategy:</strong> Segmented sequences + personalization</p>
+            <p class="text-neutral-700 mb-4"><strong class="text-neutral-900">Results:</strong> Strong engagement & conversions</p>
+            <div class="flex justify-between text-sm font-semibold">
+              <span class="text-indigo-600">+45% Open Rate</span>
+              <span class="text-cyan-600">+32% Click Rate</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="rounded-2xl bg-white border border-neutral-200 shadow-sm overflow-hidden">
+          <div class="h-48 relative">
+            <img src="./img/img_camp3.png" class="absolute inset-0 w-full h-full object-cover" alt="Relay Human Cloud" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Relay Human Cloud</h3>
+            <p class="text-neutral-700 mb-2"><strong class="text-neutral-900">Goal:</strong> Improve lead quality</p>
+            <p class="text-neutral-700 mb-2"><strong class="text-neutral-900">Approach:</strong> Targeting refinement + LP optimization</p>
+            <p class="text-neutral-700 mb-4"><strong class="text-neutral-900">Achievement:</strong> Better quality, better conversion</p>
+            <div class="flex justify-between text-sm font-semibold">
+              <span class="text-indigo-600">+20% Conversion</span>
+              <span class="text-cyan-600">+35% Cost/Lead</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Strategies & Frameworks Section -->
+    <section id="strategies" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Strategies & Frameworks</h2>
+                <div class="w-24 h-1 bg-purple-600 mx-auto mb-8"></div>
+                <p class="text-xl text-gray-600">Proven methodologies that drive results</p>
+            </div>
+
+            <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 md:p-12 shadow-lg">
+                <div class="text-center mb-8">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">🔥 The Kindling Strategy: AI Across the Funnel
+                    </h3>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                        This framework illustrates how AI enhances every stage of the B2B marketing funnel —
+                        from smarter reach at the top to optimized conversions at the bottom.
+                    </p>
+                </div>
+
+                <!-- Funnel Visualization -->
+                <div class="max-w-4xl mx-auto">
+                    <div class="relative">
+                        <!-- Funnel SVG -->
+                        <svg viewBox="0 0 400 300" class="w-full h-auto max-w-md mx-auto mb-8">
+                            <!-- Funnel Shape -->
+                            <defs>
+                                <linearGradient id="funnelGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:0.8" />
+                                    <stop offset="50%" style="stop-color:#4ECDC4;stop-opacity:0.8" />
+                                    <stop offset="100%" style="stop-color:#45B7D1;stop-opacity:0.8" />
+                                </linearGradient>
+                            </defs>
+
+                            <!-- Top of funnel (Awareness) -->
+                            <polygon points="50,50 350,50 320,120 80,120" fill="url(#funnelGradient)" stroke="#FF6B6B"
+                                stroke-width="2" />
+
+                            <!-- Middle of funnel (Consideration) -->
+                            <polygon points="80,120 320,120 280,190 120,190" fill="url(#funnelGradient)"
+                                stroke="#4ECDC4" stroke-width="2" />
+
+                            <!-- Bottom of funnel (Conversion) -->
+                            <polygon points="120,190 280,190 240,260 160,260" fill="url(#funnelGradient)"
+                                stroke="#45B7D1" stroke-width="2" />
+
+                            <!-- AI Icons -->
+                            <circle cx="200" cy="85" r="15" fill="white" stroke="#FF6B6B" stroke-width="2" />
+                            <text x="200" y="90" text-anchor="middle" fill="#FF6B6B" font-size="12"
+                                font-weight="bold">AI</text>
+
+                            <circle cx="200" cy="155" r="15" fill="white" stroke="#4ECDC4" stroke-width="2" />
+                            <text x="200" y="160" text-anchor="middle" fill="#4ECDC4" font-size="12"
+                                font-weight="bold">AI</text>
+
+                            <circle cx="200" cy="225" r="15" fill="white" stroke="#45B7D1" stroke-width="2" />
+                            <text x="200" y="230" text-anchor="middle" fill="#45B7D1" font-size="12"
+                                font-weight="bold">AI</text>
+                        </svg>
+
+                        <!-- Funnel Stage Details -->
+                        <div class="grid md:grid-cols-3 gap-6 mt-8">
+                            <!-- Awareness Stage -->
+                            <div class="text-center p-6 bg-white rounded-lg shadow-md border-l-4 border-red-400">
+                                <div class="text-3xl mb-3">🎯</div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-2">Awareness</h4>
+                                <p class="text-gray-600 mb-3">AI expands reach efficiently</p>
+                                <div class="text-2xl font-bold text-red-500">+40%</div>
+                                <div class="text-sm text-gray-500">Smarter Targeting</div>
+                            </div>
+
+                            <!-- Consideration Stage -->
+                            <div class="text-center p-6 bg-white rounded-lg shadow-md border-l-4 border-teal-400">
+                                <div class="text-3xl mb-3">💬</div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-2">Consideration</h4>
+                                <p class="text-gray-600 mb-3">AI nurtures with personalization</p>
+                                <div class="text-2xl font-bold text-teal-500">+30%</div>
+                                <div class="text-sm text-gray-500">Engagement</div>
+                            </div>
+
+                            <!-- Conversion Stage -->
+                            <div class="text-center p-6 bg-white rounded-lg shadow-md border-l-4 border-blue-400">
+                                <div class="text-3xl mb-3">⚡</div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-2">Conversion</h4>
+                                <p class="text-gray-600 mb-3">AI optimizes high-intent leads</p>
+                                <div class="text-2xl font-bold text-blue-500">+25%</div>
+                                <div class="text-sm text-gray-500">Conversion Rate</div>
+                            </div>
+                        </div>
+
+                        <!-- Framework Benefits -->
+                        <div class="mt-8 text-center">
+                            <div
+                                class="inline-flex items-center space-x-2 bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-full font-semibold">
+                                <span>🔥</span>
+                                <span>The Kindling Strategy Funnel</span>
+                                <span>🔥</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+  
+  <!-- CERTIFICATES (white) -->
+  <section id="certificates" class="py-20 bg-white text-neutral-800">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold tracking-tight">Certifications & Achievements</h2>
+        <div class="h-[2px] w-24 bg-gradient-to-r from-indigo-500 to-cyan-500 mx-auto mt-4"></div>
+        <p class="text-neutral-600 mt-6">Professional certifications that validate my expertise</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="rounded-2xl bg-white border border-neutral-200 shadow-sm overflow-hidden">
+          <div class="h-48 relative">
+            <img src="./img_c2.jpg" alt="IIM Indore" class="absolute inset-0 w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold">Indian Institute of Management Indore</h3>
+            <p class="text-neutral-700 mt-1 mb-4">Executive Program in Digital Marketing</p>
+            <div class="flex justify-between text-sm">
+              <span class="text-indigo-700 font-semibold">IIM Indore</span>
+              <span class="text-neutral-500">2025</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="rounded-2xl bg-white border border-neutral-200 shadow-sm overflow-hidden">
+          <div class="h-48 relative">
+            <img src="./img_c4.jpg" alt="Project Management" class="absolute inset-0 w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold">Project Management</h3>
+            <p class="text-neutral-700 mt-1 mb-4">Marketing & Project Leadership</p>
+            <div class="flex justify-between text-sm">
+              <span class="text-indigo-700 font-semibold">Conestoga College</span>
+              <span class="text-neutral-500">2024</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="rounded-2xl bg-white border border-neutral-200 shadow-sm overflow-hidden">
+          <div class="h-48 relative">
+            <img src="./img_c3.jpg" alt="SemRush" class="absolute inset-0 w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold">SemRush Keyword Analysis</h3>
+            <p class="text-neutral-700 mt-1 mb-4">Keyword research essentials</p>
+            <div class="flex justify-between text-sm">
+              <span class="text-indigo-700 font-semibold">SemRush</span>
+              <span class="text-neutral-500">2025</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="text-center mt-12">
+        <p class="text-neutral-600 mb-6">Want to see the full certificates? I’d be happy to share them with you.</p>
+        <button onclick="scrollToSection('contact')"
+                class="bg-indigo-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-indigo-700 transition">
+          Request Certificate Details
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS (slate-50) -->
+  <section id="skills" class="py-20 bg-slate-50 text-neutral-800">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold tracking-tight">Skills & Expertise</h2>
+        <div class="h-[2px] w-24 bg-gradient-to-r from-indigo-500 to-cyan-500 mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="text-center p-6 rounded-xl bg-white border border-neutral-200 shadow-sm">
+          <div class="text-4xl mb-3">📊</div>
+          <h3 class="text-lg font-semibold mb-1">Performance Marketing</h3>
+          <p class="text-neutral-600 text-sm">Facebook Ads, Google Ads, Analytics & Optimization</p>
+        </div>
+        <div class="text-center p-6 rounded-xl bg-white border border-neutral-200 shadow-sm">
+          <div class="text-4xl mb-3">🎯</div>
+          <h3 class="text-lg font-semibold mb-1">Product Marketing</h3>
+          <p class="text-neutral-600 text-sm">GTM strategy, positioning, messaging</p>
+        </div>
+        <div class="text-center p-6 rounded-xl bg-white border border-neutral-200 shadow-sm">
+          <div class="text-4xl mb-3">📈</div>
+          <h3 class="text-lg font-semibold mb-1">Growth Strategy</h3>
+          <p class="text-neutral-600 text-sm">Acquisition, retention, conversion optimization</p>
+        </div>
+        <div class="text-center p-6 rounded-xl bg-white border border-neutral-200 shadow-sm">
+          <div class="text-4xl mb-3">🎨</div>
+          <h3 class="text-lg font-semibold mb-1">Creative Strategy</h3>
+          <p class="text-neutral-600 text-sm">Ad creative, A/B testing, brand messaging</p>
+        </div>
+        <div class="text-center p-6 rounded-xl bg-white border border-neutral-200 shadow-sm">
+          <div class="text-4xl mb-3">📱</div>
+          <h3 class="text-lg font-semibold mb-1">Social Media</h3>
+          <p class="text-neutral-600 text-sm">Instagram, Facebook, LinkedIn campaigns</p>
+        </div>
+        <div class="text-center p-6 rounded-xl bg-white border border-neutral-200 shadow-sm md:col-span-2 lg:col-span-1">
+          <div class="text-4xl mb-3">📧</div>
+          <h3 class="text-lg font-semibold mb-1">Email Marketing</h3>
+          <p class="text-neutral-600 text-sm">Mailchimp, automation, segmentation & nurturing</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (dark to bookend) -->
+  <footer id="contact" class="pt-16 pb-8 bg-[#0b1020] text-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-10">
+        <section>
+          <h3 class="text-lg font-bold">Quick Links</h3>
+          <div class="h-[2px] w-16 bg-gradient-to-r from-indigo-500 to-cyan-500 mt-3 mb-6"></div>
+          <ul class="space-y-4">
+            <li>
+              <a href="mailto:gaurmuskan44@gmail.com" class="hover:text-white inline-flex items-center gap-3 text-white/90">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8.24l8 6.76 8-6.76V18H4z"/>
+                </svg>
+                <span>gaurmuskan44@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/muskan-gaur-a7096b1b1/" target="_blank" rel="noopener"
+                 class="hover:text-white inline-flex items-center gap-3 text-white/90">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5 2.5 2.5 0 0 1 4.98 3.5zM.5 8h4v16h-4zM8 8h3.8v2.2h.06c.53-1 1.83-2.2 3.76-2.2 4.02 0 4.76 2.65 4.76 6.1V24h-4v-7.2c0-1.72-.03-3.94-2.4-3.94-2.4 0-2.77 1.87-2.77 3.81V24h-4z"/>
+                </svg>
+                <span>/in/muskangaur</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h3 class="text-lg font-bold">About Me</h3>
+          <div class="h-[2px] w-16 bg-gradient-to-r from-indigo-500 to-cyan-500 mt-3 mb-6"></div>
+          <p class="text-white/80 leading-relaxed">
+            I'm a performance marketing professional passionate about turning ideas into measurable results.
+            From running my own yoga classes to helping B2B brands grow, I bring creativity, data-driven strategies,
+            and multi-industry experience to every project.
+          </p>
+        </section>
+      </div>
+
+      <hr class="border-white/10 my-8" />
+      <div class="text-center text-white/60 text-sm">© 2025 Your Company. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    // Mobile toggle
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn?.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+    // Shrink / darken on scroll
+    const nav = document.getElementById('site-nav');
+    const onScroll = () => {
+      if (window.scrollY > 8) nav.classList.add('nav-scrolled');
+      else nav.classList.remove('nav-scrolled');
+    };
+    onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+    // Active nav link by section
+    const links = [...document.querySelectorAll('.nav-link')];
+    const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const id = '#' + e.target.id;
+          links.forEach(l => l.removeAttribute('aria-current'));
+          const active = links.find(l => l.getAttribute('href') === id);
+          if (active) active.setAttribute('aria-current','page');
+        }
+      });
+    }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+    sections.forEach(s => io.observe(s));
+
+    // Smooth anchor scrolling + helper for buttons
+    function scrollToSection(id){ document.getElementById(id)?.scrollIntoView({behavior:'smooth'}); }
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const target = document.querySelector(a.getAttribute('href'));
+        if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth'}); }
+      });
+    });
+  </script>
+</body>
+</html>
